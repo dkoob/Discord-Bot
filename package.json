@@ -1,0 +1,25 @@
+{
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "description": "Discord bot for learning JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "!help"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkoob/Discord-Bot.git"
+  },
+  "author": "495604025429852170",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dkoob/Discord-Bot/issues"
+  },
+  "homepage": "https://github.com/dkoob/Discord-Bot#readme",
+  "dependencies": {
+    "@discordjs/rest": "0.1.0-canary.0",
+    "discord-api-types": "^0.23.1",
+    "discord.js": "^13.1.0",
+    "dotenv": "^10.0.0"
+  }
+}
