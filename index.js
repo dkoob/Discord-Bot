@@ -10,7 +10,6 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 // logs in with the token provided in .env file
 client.login(process.env.TOKEN) 
 
-
 // announces in terminal when client successfully logs in
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
