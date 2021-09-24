@@ -14,3 +14,15 @@ client.login(process.env.TOKEN)
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
   });
+
+  client.on('interactionCreate', async interaction => {
+    if (!interaction.isCommand()) return;
+  
+    const { commandName } = interaction;
+  
+    if (commandName === 'ping') {
+      await interaction.reply('Pong!');
+    } else if (commandName === 'beep') {
+      await interaction.reply('Boop!');
+    }
+  });
