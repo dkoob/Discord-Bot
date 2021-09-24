@@ -7,6 +7,6 @@ module.exports = {
         .setDescription('Kicks specified member from the server'),
     async execute(interaction) {
         member.kick( [reason] )
-        await interaction.reply({ embeds: [embedHelp] });
+        await interaction.reply("The requested user has been kicked!");
     }
 }

@@ -2,7 +2,8 @@ const Discord = require('discord.js');
 const { SlashCommandBuilder, channelMention } = require('@discordjs/builders');
 const { TextChannel, MessageEmbed, Message } = require('discord.js');
 
-/* so for embeds, you want to define a constant as show above "const { MessageEmbed } = require('discord.js');"" before anything.
+/* 
+so for embeds, you want to define a constant as show above "const { MessageEmbed } = require('discord.js');"" before anything.
 This is the constant that actually lets us use embed files from the discord.js api. Next you can see below you have to set 
 a constant for a new embed, I named this once embedHelp but you can name it whatever you want. Following is a row of 
 strings that all assign different values to the embed (self explanatory names).
