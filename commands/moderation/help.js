@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const { SlashCommandBuilder, channelMention } = require('@discordjs/builders');
 const { TextChannel, MessageEmbed, Message } = require('discord.js');
-const { execute } = require('./ping');
 
 /* so for embeds, you want to define a constant as show above "const { MessageEmbed } = require('discord.js');"" before anything.
 This is the constant that actually lets us use embed files from the discord.js api. Next you can see below you have to set 
@@ -13,9 +12,11 @@ const embedHelp = new MessageEmbed()
     .setTitle('List of Commands')
     .setAuthor('kyuu#0001', 'https://imgur.com/a/ufYxgQb')
     .setDescription('Shows the list of all current valid commands')
+    
     /* commented out this line because its currently not working and i'll look at it later
     .setThumbnail('https://imgur.com/a/qB9G8Jn')
     */
+    
     .addField('\u200b', '\u200b')
     
     /*
