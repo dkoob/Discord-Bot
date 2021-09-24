@@ -17,6 +17,12 @@ const embedHelp = new MessageEmbed()
     .setThumbnail('https://imgur.com/a/qB9G8Jn')
     */
     .addField('\u200b', '\u200b')
+    
+    /*
+    Important note! If you ever want to add another command to help (after you make your commands) copy the line
+    "{ name: 'Help', value: 'This List' }," change the name and value to the command name and short description
+    then add the line right after the most recent field.
+    */
     .addFields(
         { name: 'Help', value: 'This List' },
         { name: 'Ping', value: 'For Testing Purposes' },
