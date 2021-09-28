@@ -17,16 +17,16 @@
             const user = interaction.options.getUser('user')
             const member = interaction.guild.members.cache.get(user.id) || await interaction.guild.members.fetch(user.id).catch(err => {})
 
-            if(!interaction.member.permissions.has("KICK_MEMBERS")) return interaction.followUp({ content: "You're missing the corrent permissions :(", ephemeral: true })
+            if(!interaction.member.permissions.has("KICK_MEMBERS")) return interaction.reply({ content: "You're missing the correct permissions :(", ephemeral: false })
             
             if(!member) return interaction.deferReply("I am unsure of who to kick!");
             const reason = interaction.options.getString('reason')
 
             if(!member.kickable || member.user.id === client.user.id) 
-            return interaction.deferReply("I am unable to kick this member");
+            return interaction.reply("I am unable to kick this member");
             
             if(interaction.member.roles.highest.position <= member.roles.highest.position) 
-            return interaction.deferReply('Given member has a higher or equal rank as you so I can not kick them.')
+            return interaction.reply('Given member has a higher or equal rank as you so I can not kick them.')
             
             
             const embed = new MessageEmbed()
