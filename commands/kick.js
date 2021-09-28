@@ -28,16 +28,18 @@
             if(interaction.member.roles.highest.position <= member.roles.highest.position) 
             return interaction.deferReply('Given member has a higher or equal rank as you so I can not kick them.')
             
+            
             const embed = new MessageEmbed()
             .setDescription(`**${member.user.tag}** is kicked out from the server for \`${reason}\``)
             .setColor("RANDOM")
             .setFooter("Kick Member")
             .setTimestamp()
-
+            
+            
             await member.user.send(`You have been kicked from **\`${interaction.guild.name}\`** for \`${reason}\``).catch(err => {})
             member.kick({ reason })
 
-            return interaction.deferReply({ embeds: [ embed ]})
+            return interaction.reply({ embeds: [embed]})
 
         },
         
