@@ -8,7 +8,7 @@ module.exports = {
 	// actual body of the command, everything above ATLEAST is required for every command
 		.setName('ping')
 		.setDescription('Replies with Pong!'),
-	async execute(interaction) {
+	async execute(client, interaction) {
 		await interaction.reply('Pong!');
 	},
-};
+}; 

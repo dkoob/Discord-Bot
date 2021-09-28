@@ -7,7 +7,7 @@ require('dotenv').config();
 const fs = require('fs');
 const Discord = require('discord.js');
 const { Client, Collection, Intents } = require('discord.js');
-const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
+const client = new Client({ intents: [ Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MEMBERS ] });
 
 // logs in with the token provided in .env file
 client.login(process.env.TOKEN) 
@@ -18,21 +18,26 @@ client.on('ready', () => {
     client.user.setActivity('with zakai ;)')
   });
 
-// who the fuck knows
+  client.on('debug', console.log)
+      .on('warn', console.log)
+
+
+
   client.on('interactionCreate', async interaction => {
     if (!interaction.isCommand()) return;
   
     const { commandName } = interaction;
   
     const command = client.commands.get(interaction.commandName);
+    console.log(command, commandName);
 
 	if (!command) return;
 
 	try {
-		await command.execute(interaction);
+		await command.execute(client, interaction);
 	} catch (error) {
 		console.error(error);
-		await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+    await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
 	}
 });
 

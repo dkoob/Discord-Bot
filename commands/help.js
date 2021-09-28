@@ -28,6 +28,7 @@ const embedHelp = new MessageEmbed()
     .addFields(
         { name: 'Help', value: 'This List' },
         { name: 'Ping', value: 'For Testing Purposes' },
+        { name: 'Kick', value: 'Kicks The Specified Member' },
     )
     .setTimestamp()
     .setFooter('Run this command any time you forget anything!');
@@ -38,7 +39,7 @@ module.exports = {
 	data: new SlashCommandBuilder()
         .setName('help')
         .setDescription('Sends a list of current commands'),
-    async execute(interaction) {
+    async execute(client, interaction) {
         await interaction.reply({ embeds: [embedHelp] });
     }
 }
