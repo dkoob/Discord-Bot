@@ -32,12 +32,9 @@ const inviteEmbed = {
 	timestamp: new Date(),
 };
 
-
-// states if the slash command conatains ping it will reply with the word 'pong!'
 module.exports = {
 	data: new SlashCommandBuilder()
 		
-	// actual body of the command, everything above ATLEAST is required for every command
 		.setName('invitelink')
 		.setDescription('Provides you with our bots invite link!'),
 
