@@ -15,7 +15,7 @@ client.login(process.env.TOKEN)
 // announces in terminal when client successfully logs in
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
-    client.user.setActivity('with zakai ;)')
+    client.user.setActivity('poorly formated js code')
   });
 
   client.on('debug', console.log)

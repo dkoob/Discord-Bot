@@ -27,19 +27,23 @@ strings that all assign different values to the embed (self explanatory names).
 		},
         {
 			name: 'Help',
-			value: 'This List | Usage: /help',
+			value: 'This List **|** Usage: /help',
 		},
 		{
 			name: 'Ping',
-			value: 'For Testing Purposes | Usage: /ping',
+			value: 'For Testing Purposes **|** Usage: /ping',
 		},
 		{
 			name: 'Kick',
-			value: 'Kicks The Specified Member | Usage: /kick {member} {reason}',
+			value: 'Kicks The Specified Member **|** Usage: /kick {member} {reason}',
 		},
 		{
 			name: 'Ban',
-			value: 'Bans The Specified Member | Usage: /ban {member} {reason}',
+			value: 'Bans The Specified Member **|** Usage: /ban {member} {reason}',
+		},
+        {
+			name: 'Invite Link',
+			value: 'Provides you with our Bots invite link! **|** Usage: /invitelink',
 		},
 	],
 	timestamp: new Date(),
