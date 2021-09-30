@@ -8,8 +8,10 @@ const fs = require('fs');
 const Discord = require('discord.js');
 const { Client, Collection, Intents } = require('discord.js');
 const client = new Client({ intents: [ Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MEMBERS ] });
+const keepAlive = require('./server');
 
 // logs in with the token provided in .env file
+keepAlive();
 client.login(process.env.TOKEN) 
 
 // announces in terminal when client successfully logs in
