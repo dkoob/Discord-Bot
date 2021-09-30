@@ -14,6 +14,7 @@ module.exports = {
     
     execute: async (client, interaction, channel) => {
 
+        //    .addUserOption(option => option.setName('user').setDescription('The user').setRequired(true)),
         const user = interaction.options.getUser('user')
         const member = interaction.guild.members.cache.get(user.id) || await interaction.guild.members.fetch(user.id).catch(err => {})
 

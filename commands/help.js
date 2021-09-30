@@ -26,6 +26,15 @@ strings that all assign different values to the embed (self explanatory names).
 			inline: false,
 		},
         {
+			name: '**PUBLIC COMMANDS**',
+			value: 'All commands available to every member',
+		},
+        {
+			name: '\u200b',
+			value: '\u200b',
+			inline: false,
+		},
+        {
 			name: 'Help',
 			value: 'This List **|** Usage: /help',
 		},
@@ -33,19 +42,29 @@ strings that all assign different values to the embed (self explanatory names).
 			name: 'Ping',
 			value: 'For Testing Purposes **|** Usage: /ping',
 		},
-		{
-			name: 'Kick',
-			value: 'Kicks The Specified Member **|** Usage: /kick {member} {reason}',
-		},
-		{
-			name: 'Ban',
-			value: 'Bans The Specified Member **|** Usage: /ban {member} {reason}',
-		},
         {
 			name: 'Invite Link',
 			value: 'Provides you with our Bots invite link! **|** Usage: /invitelink',
 		},
-	],
+        {
+			name: '\u200b',
+			value: '\u200b',
+			inline: false,
+		},
+        {
+			name: '**STAFF COMMANDS**',
+			value: 'All commands available to staff members',
+		},
+        {
+			name: '\u200b',
+			value: '\u200b',
+			inline: false,
+		},
+		{
+			name: 'Staff Help',
+			value: 'Displays all commands related to Staff permissions **|** Usage: /staffhelp',
+		},
+    ],
 	timestamp: new Date(),
 };
 
